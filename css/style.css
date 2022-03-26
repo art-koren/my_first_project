@@ -597,18 +597,25 @@ button:focus {
 	position: relative;
 	max-width: 1440px;
 	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
 
-}
+
 .conclusion-wrapper__img-blacke-woman {
-	position: absolute;
-	top: 0;
-	left: 0;
+	max-width: 570px;
+	margin-bottom: -2px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.conclusion-wrapper-content {
-	margin-left: 638px;
-	padding-top: 102px;
-	padding-bottom: 104px;
+
+.conclusion-wrapper__img-blacke-woman img {
+	width: 1287px;
+	height: auto;
 }
+
 .conclusion-content__topics {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -616,12 +623,82 @@ button:focus {
 	grid-gap: 90px;
 }
 
+.conclusion-content__topics > div {
+	padding: 0 16px;
+}
+
+.conclusion-content__topics > div:not(:last-child) {
+	box-shadow: inset -1px 0px 0px rgb(0 0 0 / 3%);
+}
+
+@media screen and (max-width: 1024px) {
+	.content-wrapper__conclusion {
+		flex-direction: column;
+	}
+
+	.conclusion-wrapper__img-blacke-woman {
+		margin-bottom: 36px;
+		max-width: 100%;
+	}
+
+	.conclusion-wrapper-content {
+		margin-bottom: 16px;
+	}
+
+	.conclusion-content__topics {
+		justify-content: space-around;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.conclusion-content__topics {
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 16px;
+	}
+	a.link {
+		display: block;
+	}
+
+	.conclusion-content__topics > div > p:not(:last-child) {
+		margin-bottom: 16px;
+	}
+	.article-content-wrapper_block-content {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.article-content-wrapper_block-content > div {
+		padding-bottom: 36px;
+	}
+	.box {
+		overflow: hidden;
+	}
+
+	.block-squares-content-boxes__box-3__img-cocktail {
+		left: 0;
+		right: auto;
+	}
+	.block-squares-content-boxes__box-3__img-cocktail img {
+		width: 768px;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.contact-us-wapper__img-black-man, .statistics-wrapper__img-man {
+		display: none;
+	}
+
+	.statistics-wrapper-content {
+		margin-left: 30px;
+	}
+}
+
 
 .decoration-hed {
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 700;
-	line-height: 11px;
+	line-height: 17px;
 	letter-spacing: -0.006em;
 	color: var(--main-color);
 	margin-bottom: 54px;
@@ -636,9 +713,6 @@ button:focus {
 
 a.link {
 	color: var(--light-blue-text-color);
-	position: absolute;
-	top: 30px;
-	left: 0;
 }
 
 .conclusion-content__second-column__content {
