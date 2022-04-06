@@ -184,11 +184,13 @@ button:focus {
 }
 
 
-/*@media screen and (max-width: 1110px) {
-	.home-wrapper__background-el-blue, .home-wrapper__img-faces {
-		display: none;
-	}*/
+@media screen and (max-width: 1110px) {
 
+	.home-wrapper__background-el-blue,
+	.home-wrapper__img-faces {
+		display: none;
+	}
+}
 
 .description-wrapper {
 	position: relative;
